@@ -1,0 +1,9 @@
+sudo apt update
+sudo apt install python3-pip
+pip install -r requirements.txt
+ps -fA | grep python
+sudo apt install gunicorn
+cat /proc/cpuinfo | grep 'core id' | wc -l
+ps ax | grep gunicorn
+gunicorn -w 5 -b 0.0.0.0:5000 flask_api_sp:app --timeout 90 --daemon
+pkill gunicorn

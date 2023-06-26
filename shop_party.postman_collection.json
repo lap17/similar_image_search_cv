@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "3dac8b2e-bc67-4a09-91de-c49917077a26",
+		"name": "shop_party",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12548259"
+	},
+	"item": [
+		{
+			"name": "/catalog/delete/",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name_catalog",
+							"value": "catalog_test",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://0.0.0.0:5000/catalog/delete/",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "5000",
+					"path": [
+						"catalog",
+						"delete",
+						""
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/catalog/add_images/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name_catalog",
+							"value": "catalog_test",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/I534746/Desktop/ShopParty/Flask api/all_images_orig.zip"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://0.0.0.0:5000/catalog/add_images/",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "5000",
+					"path": [
+						"catalog",
+						"add_images",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/detect_items/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/I534746/Desktop/ShopParty/Flask api/test_video/frame34460.jpg"
+						},
+						{
+							"key": "name_catalog",
+							"value": "catalog_test",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://0.0.0.0:5000/detect_items/",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "5000",
+					"path": [
+						"detect_items",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
